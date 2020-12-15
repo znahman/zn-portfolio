@@ -38,7 +38,7 @@ const Header = (props: HeaderProps) => (
         <PageLink to="/resume">
             resume
         </PageLink>
-        <PageLink to="/stack">
+        <PageLink to="/tech">
             tech
         </PageLink>
         </RightJustifyContainer>
