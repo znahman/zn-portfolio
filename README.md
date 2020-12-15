@@ -5,7 +5,7 @@
 [![typescript](https://img.shields.io/npm/types/typescript)](https://www.typescriptlang.org/)
 [![emotion](https://img.shields.io/badge/Styled%20with-Emotion-ff69b4)](https://emotion.sh/docs/introduction)
 [![prettier](https://img.shields.io/badge/Formatted%20with-Prettier-orange)](https://prettier.io/)
-[![yarn](https://img.shields.io/badge/Package%manager-Yarn-blue)](https://yarnpkg.com/)
+[![yarn](https://img.shields.io/badge/Package%20manager-Yarn-blue)](https://yarnpkg.com/)
 
 The 3rd iteration of my resume website. This time built with gatsby and leveraging a bunch of other cool tech.
 
