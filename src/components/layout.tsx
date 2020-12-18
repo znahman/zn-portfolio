@@ -16,7 +16,7 @@ type LayoutProps = {
     children: React.ReactNode
 }
 
-const EmotionTest = styled.div`
+const MainContainer = styled.div`
     padding-top: 32px;
     margin: auto;
     width: 600px;
@@ -50,10 +50,10 @@ const Layout: React.FC<LayoutProps> = (props: LayoutProps) => {
                 `}
             />
             <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-            <EmotionTest>
+            <MainContainer>
                 <main>{props.children}</main>
                 <Footer />
-            </EmotionTest>
+            </MainContainer>
         </>
     )
 }
