@@ -14,10 +14,8 @@ const TextContainer = styled.div`
     text-align: center;
 `
 
-const ParagraphHeader = (props: ParagraphHeaderProps) => (
-    <TextContainer>
-        {props.title}
-    </TextContainer>
-)
+const ParagraphHeader: React.FC<ParagraphHeaderProps> = (
+    props: ParagraphHeaderProps
+) => <TextContainer>{props.title}</TextContainer>
 
 export default ParagraphHeader

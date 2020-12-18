@@ -20,12 +20,14 @@ const RightAlignTextContainer = styled.div`
     font-family: 'Courier New', monospace;
 `
 
-
-
-const ResumeJobHeader = (props: ResumeJobHeaderProps) => (
+const ResumeJobHeader: React.FC<ResumeJobHeaderProps> = (
+    props: ResumeJobHeaderProps
+) => (
     <FlexContainer>
         <div>
-                <b>{props.jobTitle}</b>{` at `}<ALink linkText={props.workplaceTitle} href={props.workplaceLink}/>
+            <b>{props.jobTitle}</b>
+            {` at `}
+            <ALink linkText={props.workplaceTitle} href={props.workplaceLink} />
         </div>
         <RightAlignTextContainer>
             {props.rightAlignText}

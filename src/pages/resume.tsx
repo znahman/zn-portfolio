@@ -15,88 +15,140 @@ const ResumeListItem = styled.li`
     margin: 4px 0;
 `
 
-const Resume: React.FC  = () => (
+const ResumeSectionHeader = styled.h3`
+    text-align: center;
+`
+
+const Resume: React.FC = () => (
     <Layout>
         <SEO title="Resume" />
-        <ParagraphHeader title="resume"/>
+        <ParagraphHeader title="resume" />
         <p>
-        <h3>Education:</h3>
-        <ResumeJobHeader 
-            jobTitle="BS in Mechanical Engineering" 
-            workplaceTitle={`CSM`} 
-            workplaceLink={`https://mechanical.mines.edu/`} 
-            rightAlignText={`2011 - 2015`}/>
-        <ResumeList>
-            <ResumeListItem>Varsity swimming</ResumeListItem>
-            <ResumeListItem>Poetry editor for <ALink linkText={`High Grade`} href={`http://highgrade.mines.edu/`}/></ResumeListItem>
-        </ResumeList>
-        <ResumeJobHeader 
-            jobTitle="Computer Science Classes" 
-            workplaceTitle={`Regis University`} 
-            workplaceLink={`https://www.regis.edu/`} 
-            rightAlignText={`2016`}/>
-        <ResumeList>
-            <ResumeListItem>Attended undergraduate computer science courses to build a background in computer science</ResumeListItem>
-        </ResumeList>
-        <ResumeJobHeader 
-            jobTitle="MS in Computer Science" 
-            workplaceTitle={`CSM`} 
-            workplaceLink={`https://cs.mines.edu/`} 
-            rightAlignText={`2017 - 2019`}/>
-        <ResumeList>
-        <ResumeListItem>Researched long-term autonomy for mobile robots with the{` `}<ALink
-                href="https://hcr.mines.edu"
-                linkText="Human Centered Robotics Lab"
-            /></ResumeListItem>
-        </ResumeList>
-        <h3>Work Experience:</h3>
-        <ResumeJobHeader 
-            jobTitle="Software Development Engineer" 
-            workplaceTitle={`Workday`} 
-            workplaceLink={`https://www.workday.com`} 
-            rightAlignText={`Feb 2020 - Present`}/>
-        <ResumeList>
-            <ResumeListItem>Front-end development on the Workday Drive team</ResumeListItem>
-        </ResumeList>
-        <ResumeJobHeader 
-            jobTitle="Software Engineer Intern" 
-            workplaceTitle={`Workday`} 
-            workplaceLink={`https://www.workday.com`} 
-            rightAlignText={`May 2019 - Dec 2019`}/>
-        <ResumeList>
-            <ResumeListItem>Back-end development on the Workday Drive team</ResumeListItem>
-        </ResumeList>
-        <ResumeJobHeader 
-            jobTitle="Robotics Engineer Intern" 
-            workplaceTitle={`SSL Robotics`} 
-            workplaceLink={`https://www.maxar.com/`} 
-            rightAlignText={`May 2018 - Aug 2018`}/>
-        <ResumeList>
-            <ResumeListItem>Built a robotic actuator test automation suite in Ruby</ResumeListItem>
-            <ResumeListItem>Demonstrated LIDAR technology using ROS and MoveIt package</ResumeListItem>
-        </ResumeList>
-        <ResumeJobHeader 
-            jobTitle="Project Engineer" 
-            workplaceTitle={`Wolf Robotics`} 
-            workplaceLink={`http://www.wolfrobotics.com/`} 
-            rightAlignText={`Jun 2015 - Feb 2018`}/>
-        <ResumeList>
-            <ResumeListItem>Mechanical site support and integration at customer facilty 
-                for 9 DOF overhead robotic welding gantry with revolutionary automatic 
-                programming capability</ResumeListItem>
-        </ResumeList>
-        <h3>Publications:</h3>
-        <ResumeList>
-            <ResumeListItem>
-                <ALink linkText={`Voxel-based representation learning for place recognition based on 3D point clouds`} href={`http://ras.papercept.net/images/temp/IROS/files/0686.pdf`}/><br/>
-                Sriram Siva, <b>Zachary Nahman</b>, and Hao Zhang<br/>
-                IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2020.
-            </ResumeListItem>
-            <ResumeListItem>
-                Featured in: {` `}<ALink linkText={`Colorado's Best Emerging Poets: An Anthology`} href={`https://www.amazon.com/Colorados-Best-Emerging-Poets-Anthology/dp/1984105795/ref=sr_1_4?dchild=1&keywords=colorado+best+emerging+poets&qid=1608001536&sr=8-4`}/><br/>
-                Poem: <i>Steel My Resolve</i>, 2018.
-            </ResumeListItem>
-        </ResumeList>
+            <ResumeSectionHeader>Education:</ResumeSectionHeader>
+            <ResumeJobHeader
+                jobTitle="MS in Computer Science"
+                workplaceTitle={`CSM`}
+                workplaceLink={`https://cs.mines.edu/`}
+                rightAlignText={`2017 - 2019`}
+            />
+            <ResumeList>
+                <ResumeListItem>
+                    Researched long-term autonomy for mobile robots with the
+                    {` `}
+                    <ALink
+                        href="https://hcr.mines.edu"
+                        linkText="Human Centered Robotics Lab"
+                    />
+                </ResumeListItem>
+            </ResumeList>
+            <ResumeJobHeader
+                jobTitle="Computer Science Classes"
+                workplaceTitle={`Regis University`}
+                workplaceLink={`https://www.regis.edu/`}
+                rightAlignText={`2016`}
+            />
+            <ResumeList>
+                <ResumeListItem>
+                    Attended undergraduate computer science courses to build a
+                    background in computer science
+                </ResumeListItem>
+            </ResumeList>
+            <ResumeJobHeader
+                jobTitle="BS in Mechanical Engineering"
+                workplaceTitle={`CSM`}
+                workplaceLink={`https://mechanical.mines.edu/`}
+                rightAlignText={`2011 - 2015`}
+            />
+            <ResumeList>
+                <ResumeListItem>Varsity swimming</ResumeListItem>
+                <ResumeListItem>
+                    Poetry editor for{' '}
+                    <ALink
+                        linkText={`High Grade`}
+                        href={`http://highgrade.mines.edu/`}
+                    />
+                </ResumeListItem>
+            </ResumeList>
+            <ResumeSectionHeader>Work Experience:</ResumeSectionHeader>
+            <ResumeJobHeader
+                jobTitle="Software Development Engineer"
+                workplaceTitle={`Workday`}
+                workplaceLink={`https://www.workday.com`}
+                rightAlignText={`Feb 2020 - Present`}
+            />
+            <ResumeList>
+                <ResumeListItem>
+                    Front-end development for Workdy's Drive product
+                </ResumeListItem>
+                <ResumeListItem>
+                    Worked on product re-architecture
+                </ResumeListItem>
+                <ResumeListItem>Participant in on-call rotation</ResumeListItem>
+            </ResumeList>
+            <ResumeJobHeader
+                jobTitle="Software Engineer Intern"
+                workplaceTitle={`Workday`}
+                workplaceLink={`https://www.workday.com`}
+                rightAlignText={`May 2019 - Dec 2019`}
+            />
+            <ResumeList>
+                <ResumeListItem>
+                    Back-end development for Workday's Drive product
+                </ResumeListItem>
+                <ResumeListItem>
+                    Built endpoints for sharing features
+                </ResumeListItem>
+            </ResumeList>
+            <ResumeJobHeader
+                jobTitle="Robotics Engineer Intern"
+                workplaceTitle={`SSL Robotics`}
+                workplaceLink={`https://www.maxar.com/`}
+                rightAlignText={`May 2018 - Aug 2018`}
+            />
+            <ResumeList>
+                <ResumeListItem>
+                    Built a robotic actuator test automation suite in Ruby
+                </ResumeListItem>
+                <ResumeListItem>
+                    Demonstrated LIDAR technology using ROS and MoveIt package
+                </ResumeListItem>
+            </ResumeList>
+            <ResumeJobHeader
+                jobTitle="Project Engineer"
+                workplaceTitle={`Wolf Robotics`}
+                workplaceLink={`http://www.wolfrobotics.com/`}
+                rightAlignText={`Jun 2015 - Feb 2018`}
+            />
+            <ResumeList>
+                <ResumeListItem>
+                    Mechanical site support and integration at customer facilty
+                    for 9 DOF overhead robotic welding gantry with revolutionary
+                    automatic programming capability
+                </ResumeListItem>
+            </ResumeList>
+            <ResumeSectionHeader>Publications:</ResumeSectionHeader>
+            <ResumeList>
+                <ResumeListItem>
+                    <ALink
+                        linkText={`Voxel-based representation learning for place recognition based on 3D point clouds`}
+                        href={`http://ras.papercept.net/images/temp/IROS/files/0686.pdf`}
+                    />
+                    <br />
+                    Sriram Siva, <b>Zachary Nahman</b>, and Hao Zhang
+                    <br />
+                    IEEE/RSJ International Conference on Intelligent Robots and
+                    Systems (IROS), 2020.
+                </ResumeListItem>
+                <ResumeListItem>
+                    Featured in: {` `}
+                    <ALink
+                        linkText={`Colorado's Best Emerging Poets: An Anthology`}
+                        href={`https://www.amazon.com/Colorados-Best-Emerging-Poets-Anthology/dp/1984105795/ref=sr_1_4?dchild=1&keywords=colorado+best+emerging+poets&qid=1608001536&sr=8-4`}
+                    />
+                    <br />
+                    Poem: <i>Steel My Resolve</i>, 2018.
+                </ResumeListItem>
+            </ResumeList>
         </p>
     </Layout>
 )

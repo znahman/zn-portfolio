@@ -34,12 +34,11 @@ const TextContainer = styled.div`
     flex-direction: column;
 `
 
-const IDCard = (props: IDCardProps) => {
-
+const IDCard: React.FC<IDCardProps> = (props: IDCardProps) => {
     const data = useStaticQuery(graphql`
         query {
             placeholderImage: file(
-                relativePath: { eq: "profile-photo.jpeg" }
+                relativePath: { eq: "profile-photo-l.png" }
             ) {
                 childImageSharp {
                     fluid(maxWidth: 100) {
@@ -50,17 +49,15 @@ const IDCard = (props: IDCardProps) => {
         }
     `)
 
-    return(
+    return (
         <IDCardStyle>
-            <ProfileImage fluid={data.placeholderImage.childImageSharp.fluid}/>
-                <TextContainer>
-                    <div style={{fontWeight: `bold`, fontSize: `24px`}}>
-                        {props.name}
-                    </div>
-                    <div>
-                        {props.title}
-                    </div>
-                </TextContainer>
+            <ProfileImage fluid={data.placeholderImage.childImageSharp.fluid} />
+            <TextContainer>
+                <div style={{ fontWeight: `bold`, fontSize: `24px` }}>
+                    {props.name}
+                </div>
+                <div>{props.title}</div>
+            </TextContainer>
         </IDCardStyle>
     )
 }

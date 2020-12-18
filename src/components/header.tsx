@@ -21,26 +21,27 @@ const HomeLink = styled(Link)`
     padding: 16px 16px 16px 32px;
     color: white;
     text-decoration: none;
+    :hover {
+        text-decoration: underline;
+        color: #66ff00;
+    }
 `
 
 const PageLink = styled(Link)`
     padding: 16px 32px;
     color: white;
     text-decoration: none;
+    :hover {
+        text-decoration: underline;
+        color: #66ff00;
+    }
 `
 
-const Header = (props: HeaderProps) => (
+const Header: React.FC<HeaderProps> = (props: HeaderProps) => (
     <HeaderContainer>
-        <HomeLink to="/">
-            {props.siteTitle}
-        </HomeLink>
+        <HomeLink to="/">{props.siteTitle}</HomeLink>
         <RightJustifyContainer>
-        <PageLink to="/resume">
-            resume
-        </PageLink>
-        <PageLink to="/tech">
-            tech
-        </PageLink>
+            <PageLink to="/resume">resume</PageLink>
         </RightJustifyContainer>
     </HeaderContainer>
 )

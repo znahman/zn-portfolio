@@ -12,13 +12,15 @@ const StyledLink = styled.a`
     text-align: center;
     text-decoration: none;
     font-size: 18px;
-    :hover{
+    :hover {
         text-decoration: underline;
     }
 `
 
-const ALink = (props: ALinkProps) => (
-    <StyledLink href={props.href} target="_blank">{props.linkText}</StyledLink>
+const ALink: React.FC<ALinkProps> = (props: ALinkProps) => (
+    <StyledLink href={props.href} target="_blank">
+        {props.linkText}
+    </StyledLink>
 )
 
 export default ALink

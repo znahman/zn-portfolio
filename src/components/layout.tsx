@@ -7,8 +7,8 @@
 
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import  {Global, css} from "@emotion/react"
-import styled from "@emotion/styled"
+import { Global, css } from '@emotion/react'
+import styled from '@emotion/styled'
 import Header from './header'
 import Footer from './footer'
 
@@ -22,7 +22,7 @@ const EmotionTest = styled.div`
     width: 600px;
 `
 
-const Layout = (props: LayoutProps) => {
+const Layout: React.FC<LayoutProps> = (props: LayoutProps) => {
     const data = useStaticQuery(graphql`
         query SiteTitleQuery {
             site {
@@ -35,25 +35,25 @@ const Layout = (props: LayoutProps) => {
 
     return (
         <>
-        <Global
-            styles={css`
-                div {
-                    font-family: Verdana;
-                    color: white;
-                }
-                html, body {
-                    margin: 0;
-                    padding: 0;
-                    background: #3a3b3c;
-                }
-            `}
-        />
+            <Global
+                styles={css`
+                    div {
+                        font-family: Verdana;
+                        color: white;
+                    }
+                    html,
+                    body {
+                        margin: 0;
+                        padding: 0;
+                        background: #3a3b3c;
+                    }
+                `}
+            />
             <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-                <EmotionTest>
+            <EmotionTest>
                 <main>{props.children}</main>
-                <Footer/>
-                </EmotionTest>
-                
+                <Footer />
+            </EmotionTest>
         </>
     )
 }

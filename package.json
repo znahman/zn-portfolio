@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "zn-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Resume Website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Zach Nahman <znahman@gmail.com>",
   "dependencies": {
     "@emotion/react": "^11.1.2",
     "@emotion/styled": "^11.0.0",
@@ -11,6 +11,7 @@
     "@types/react-dom": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.9.0",
     "@typescript-eslint/parser": "^4.9.0",
+    "dotenv": "^8.2.0",
     "eslint-config-prettier": "^7.0.0",
     "eslint-plugin-prettier": "^3.2.0",
     "gatsby": "^2.26.1",
@@ -51,7 +52,8 @@
     "clean": "gatsby clean",
     "lint": "eslint . --ext ts --ext tsx",
     "test": "yarn run type-check && yarn run lint",
-    "type-check": "tsc --pretty --noEmit"
+    "type-check": "tsc --pretty --noEmit",
+    "deploy": "./scripts/deploy.sh"
   },
   "repository": {
     "type": "git",
