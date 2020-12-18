@@ -38,7 +38,7 @@ const IDCard: React.FC<IDCardProps> = (props: IDCardProps) => {
     const data = useStaticQuery(graphql`
         query {
             placeholderImage: file(
-                relativePath: { eq: "profile-photo-l.png" }
+                relativePath: { eq: "profile-photo-transparent.png" }
             ) {
                 childImageSharp {
                     fluid(maxWidth: 100) {
