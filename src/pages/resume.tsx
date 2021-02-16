@@ -128,15 +128,17 @@ const Resume: React.FC = () => (
             </ResumeList>
             <ResumeSectionHeader>Publications:</ResumeSectionHeader>
             <ResumeList>
-            <ResumeListItem>
+                <ResumeListItem>
                     <ALink
                         linkText={`“Excuse Me, Robot”: Impact of Polite Robot Wakewords on Human-Robot Politeness`}
                         href={`https://mirrorlab.mines.edu/publications/williams2020icsr/`}
                     />
                     <br />
-                    Tom Williams, Daniel Grollman, Mingyuan Han, Ryan Blake Jackson, Jane Lockshin, Ruchen Wen, <b>Zachary Nahman</b>, and Qin Zhu
+                    Tom Williams, Daniel Grollman, Mingyuan Han, Ryan Blake
+                    Jackson, Jane Lockshin, Ruchen Wen, <b>Zachary Nahman</b>,
+                    and Qin Zhu
                     <br />
-                    International Conference on Social Robotics (ICSR), 2021.
+                    International Conference on Social Robotics (ICSR), 2020.
                 </ResumeListItem>
                 <ResumeListItem>
                     <ALink
@@ -150,7 +152,7 @@ const Resume: React.FC = () => (
                     Systems (IROS), 2020.
                 </ResumeListItem>
                 <ResumeListItem>
-                Master's Thesis: {` `}
+                    Master's Thesis: {` `}
                     <ALink
                         linkText={`Robot Learning for Loop Closure Detection and SLAM`}
                         href={`https://mountainscholar.org/handle/11124/173999`}

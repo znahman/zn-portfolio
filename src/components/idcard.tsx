@@ -58,7 +58,9 @@ const IDCard: React.FC<IDCardProps> = (props: IDCardProps) => {
                     {props.name}
                 </div>
                 <div>{props.title}</div>
-                <div style={{fontStyle: `italic`, fontSize: `12px`}}>{props.pronouns}</div>
+                <div style={{ fontStyle: `italic`, fontSize: `12px` }}>
+                    {props.pronouns}
+                </div>
             </TextContainer>
         </IDCardStyle>
     )
