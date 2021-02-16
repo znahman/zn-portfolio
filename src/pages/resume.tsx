@@ -36,7 +36,7 @@ const Resume: React.FC = () => (
                     Researched long-term autonomy for mobile robots with the
                     {` `}
                     <ALink
-                        href="https://hcr.mines.edu"
+                        href="http://hcr.mines.edu"
                         linkText="Human Centered Robotics Lab"
                     />
                 </ResumeListItem>
@@ -128,9 +128,19 @@ const Resume: React.FC = () => (
             </ResumeList>
             <ResumeSectionHeader>Publications:</ResumeSectionHeader>
             <ResumeList>
+            <ResumeListItem>
+                    <ALink
+                        linkText={`“Excuse Me, Robot”: Impact of Polite Robot Wakewords on Human-Robot Politeness`}
+                        href={`https://mirrorlab.mines.edu/publications/williams2020icsr/`}
+                    />
+                    <br />
+                    Tom Williams, Daniel Grollman, Mingyuan Han, Ryan Blake Jackson, Jane Lockshin, Ruchen Wen, <b>Zachary Nahman</b>, and Qin Zhu
+                    <br />
+                    International Conference on Social Robotics (ICSR), 2021.
+                </ResumeListItem>
                 <ResumeListItem>
                     <ALink
-                        linkText={`Voxel-based representation learning for place recognition based on 3D point clouds`}
+                        linkText={`Voxel-Based Representation Learning for Place Recognition Based on 3D Point Clouds`}
                         href={`http://ras.papercept.net/images/temp/IROS/files/0686.pdf`}
                     />
                     <br />
@@ -138,6 +148,17 @@ const Resume: React.FC = () => (
                     <br />
                     IEEE/RSJ International Conference on Intelligent Robots and
                     Systems (IROS), 2020.
+                </ResumeListItem>
+                <ResumeListItem>
+                Master's Thesis: {` `}
+                    <ALink
+                        linkText={`Robot Learning for Loop Closure Detection and SLAM`}
+                        href={`https://mountainscholar.org/handle/11124/173999`}
+                    />
+                    <br />
+                    <b>Zachary Nahman</b>
+                    <br />
+                    2019 - Mines Theses & Dissertations, 2019.
                 </ResumeListItem>
                 <ResumeListItem>
                     Featured in: {` `}
