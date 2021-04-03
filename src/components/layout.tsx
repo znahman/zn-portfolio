@@ -20,6 +20,9 @@ const MainContainer = styled.div`
     padding-top: 32px;
     margin: auto;
     width: 600px;
+    @media (max-width: 400px) {
+        width: 400px;
+    }
 `
 
 const Layout: React.FC<LayoutProps> = (props: LayoutProps) => {
