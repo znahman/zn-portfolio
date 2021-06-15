@@ -6,6 +6,7 @@ import ParagraphHeader from '../components/paragraph-header'
 import ResumeJobHeader from '../components/resume-job-header'
 import styled from '@emotion/styled'
 import ALink from '../components/alink'
+import DynamicResumeItem from '../components/dynamic-resume-item'
 
 const ResumeList = styled.ul`
     margin: 0;
@@ -25,6 +26,13 @@ const Resume: React.FC = () => (
         <ParagraphHeader title="resume" />
         <p>
             <ResumeSectionHeader>Education:</ResumeSectionHeader>
+            <DynamicResumeItem
+                title="MS in Computer Science"
+                subtextTitle={`CSM`}
+                subtextLink={`https://cs.mines.edu/`}
+                rightAlignText={`2017 - 2019`}
+                detailText={`blah blah blah blah blah`}
+            />
             <ResumeJobHeader
                 jobTitle="MS in Computer Science"
                 workplaceTitle={`CSM`}

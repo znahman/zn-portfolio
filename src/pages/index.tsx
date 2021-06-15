@@ -34,10 +34,10 @@ const IndexPage: React.FC = () => (
             .
         </p>
         <p style={{ lineHeight: `1.6`, textAlign: `justify` }}>
-            When I'm not writing code, I enjoy spending time with my
-            wife, Taylor, and family. We've got a spicy cat named Gordon and a
-            sweet dog named Emma. I also enjoy exercising, playing video games,
-            and picking up new hobbies. Thanks for visiting :)
+            When I'm not writing code, I enjoy spending time with my wife,
+            Taylor, and family. We've got a spicy cat named Gordon and a sweet
+            dog named Emma. I also enjoy exercising, playing video games, and
+            picking up new hobbies. Thanks for visiting :)
         </p>
     </Layout>
 )
