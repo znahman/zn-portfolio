@@ -16,7 +16,7 @@ type LayoutProps = {
     children: React.ReactNode
 }
 
-const MainContainer = styled.div`
+const MainContainer = styled(`div`)`
     padding-top: 32px;
     margin: auto;
     width: 600px;

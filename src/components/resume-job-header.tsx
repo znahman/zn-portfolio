@@ -9,10 +9,10 @@ type ResumeJobHeaderProps = {
     rightAlignText: string
 }
 
-const FlexContainer = styled.div`
-    display: flex;
-    align-items: center;
-`
+const FlexContainer = styled(`div`)({
+    display: `flex`,
+    alignItems: `center`,
+})
 
 const RightAlignTextContainer = styled.div`
     margin-left: auto;

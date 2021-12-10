@@ -7,17 +7,18 @@ import ResumeJobHeader from '../components/resume-job-header'
 import styled from '@emotion/styled'
 import ALink from '../components/alink'
 
-const ResumeList = styled.ul`
-    margin: 0;
-    padding-bottom: 6px;
-`
-const ResumeListItem = styled.li`
-    margin: 4px 0;
-`
+const ResumeList = styled(`ul`)({
+    margin: 0,
+    paddingBottom: `6px`,
+})
 
-const ResumeSectionHeader = styled.h3`
-    text-align: center;
-`
+const ResumeListItem = styled(`li`)({
+    margin: `4px 0`,
+})
+
+const ResumeSectionHeader = styled(`h3`)({
+    textAlign: `center`,
+})
 
 const Resume: React.FC = () => (
     <Layout>

@@ -9,31 +9,31 @@ type IDCardProps = {
     pronouns: string
 }
 
-const IDCardStyle = styled.div`
-    box-sizing: border-box;
-    width: 400px;
-    height: 200px;
-    border: 2px solid white;
-    border-radius: 20px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    padding: 32px;
-`
+const IDCardStyle = styled(`div`)({
+    boxSizing: `border-box`,
+    width: `400px`,
+    height: `200px`,
+    border: `2px solid white`,
+    borderRadius: `20px`,
+    margin: `auto`,
+    display: `flex`,
+    alignItems: `center`,
+    padding: `32px`,
+})
 
-const ProfileImage = styled(Img)`
-    box-sizing: border-box;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    border: 2px solid white;
-`
+const ProfileImage = styled(Img)({
+    boxSizing: `border-box`,
+    height: `100px`,
+    width: `100px`,
+    borderRadius: `50%`,
+    border: `2px solid white`,
+})
 
-const TextContainer = styled.div`
-    padding-left: 32px;
-    dispay: flex;
-    flex-direction: column;
-`
+const TextContainer = styled(`div`)({
+    paddingLeft: `32px`,
+    dispay: `flex`,
+    flexDirection: `column`,
+})
 
 const IDCard: React.FC<IDCardProps> = (props: IDCardProps) => {
     const data = useStaticQuery(graphql`
