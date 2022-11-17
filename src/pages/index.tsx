@@ -16,7 +16,7 @@ const IndexPage: React.FC = () => (
         />
         <ParagraphHeader title="hello world" />
         <p style={{ lineHeight: `1.6`, textAlign: `justify` }}>
-            I am a Software Development Engineer at{` `}
+            I am a Software Engineering Manager at{` `}
             <ALink href="https://www.workday.com" linkText="Workday" />. I love
             learning about the web and working with web applications. I've
             worked previously in industrial automation and aerospace robotics.

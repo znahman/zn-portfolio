@@ -73,17 +73,26 @@ const Resume: React.FC = () => (
             </ResumeList>
             <ResumeSectionHeader>Work Experience:</ResumeSectionHeader>
             <ResumeJobHeader
-                jobTitle="Software Development Engineer"
+                jobTitle="Software Engineering Manager"
                 workplaceTitle={`Workday`}
                 workplaceLink={`https://www.workday.com`}
-                rightAlignText={`Feb 2020 - Present`}
+                rightAlignText={`Nov 2022 - Present`}
             />
             <ResumeList>
                 <ResumeListItem
-                    text={`Front-end development for Workdy's Drive product`}
+                    text={`Workday Drive and File Management Platform`}
                 />
-                <ResumeListItem text={`Worked on product re-architecture`} />
-                <ResumeListItem text={`Participant in on-call rotation`} />
+            </ResumeList>
+            <ResumeJobHeader
+                jobTitle="Software Development Engineer"
+                workplaceTitle={`Workday`}
+                workplaceLink={`https://www.workday.com`}
+                rightAlignText={`Feb 2020 - Oct 2022`}
+            />
+            <ResumeList>
+                <ResumeListItem
+                    text={`Front-end and back-end development on multiple projects`}
+                />
             </ResumeList>
             <ResumeJobHeader
                 jobTitle="Software Engineer Intern"
@@ -95,7 +104,6 @@ const Resume: React.FC = () => (
                 <ResumeListItem
                     text={`Back-end development for Workday's Drive product`}
                 />
-                <ResumeListItem text={`Built endpoints for sharing features`} />
             </ResumeList>
             <ResumeJobHeader
                 jobTitle="Robotics Engineer Intern"
@@ -129,6 +137,18 @@ const Resume: React.FC = () => (
                 <PublicationListItem
                     titleLink={
                         <ALink
+                            linkText={`Voxel-Based Representation Learning for Place Recognition Based on 3D Point Clouds`}
+                            href={`http://ras.papercept.net/images/temp/IROS/files/0686.pdf`}
+                        />
+                    }
+                    authors={`Sriram Siva, Zachary Nahman, and Hao Zhang`}
+                    me={`Zachary Nahman`}
+                    venue={`IEEE/RSJ International Conference on Intelligent Robots and
+                    Systems (IROS), 2020`}
+                />
+                <PublicationListItem
+                    titleLink={
+                        <ALink
                             linkText={`“Excuse Me, Robot”: Impact of Polite Robot Wakewords on Human-Robot Politeness`}
                             href={`https://mirrorlab.mines.edu/publications/williams2020icsr/`}
                         />
@@ -142,18 +162,6 @@ const Resume: React.FC = () => (
                 <PublicationListItem
                     titleLink={
                         <ALink
-                            linkText={`Voxel-Based Representation Learning for Place Recognition Based on 3D Point Clouds`}
-                            href={`http://ras.papercept.net/images/temp/IROS/files/0686.pdf`}
-                        />
-                    }
-                    authors={`Sriram Siva, Zachary Nahman, and Hao Zhang`}
-                    me={`Zachary Nahman`}
-                    venue={`IEEE/RSJ International Conference on Intelligent Robots and
-                    Systems (IROS), 2020`}
-                />
-                <PublicationListItem
-                    titleLink={
-                        <ALink
                             linkText={`Robot Learning for Loop Closure Detection and SLAM`}
                             href={`https://mountainscholar.org/handle/11124/173999`}
                         />
@@ -161,6 +169,17 @@ const Resume: React.FC = () => (
                     authors={`Master's Thesis: Zachary Nahman`}
                     me={`Zachary Nahman`}
                     venue={`2019 - Mines Theses & Dissertations, 2019`}
+                />
+                <PublicationListItem
+                    titleLink={
+                        <ALink
+                            linkText={`Poster: AI-enabled robotic NDE for structural damage diagnosis and mapping`}
+                            href={``}
+                        />
+                    }
+                    authors={`Xiaodong Shi, Zachary Nahman, Fares Alharbi, Ciaron Hamilton, Yiming Deng, and Hao Zhang`}
+                    me={`Zachary Nahman`}
+                    venue={`International Symposium on Applied Electromagnetics and Mechanics (ISEM), 2019. * Best Poster Award`}
                 />
                 <PublicationListItem
                     titleLink={
