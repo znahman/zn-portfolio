@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactFragment, useState } from 'react'
 import styled from '@emotion/styled'
 import ALink from './alink'
 
@@ -7,11 +7,15 @@ type ResumeJobHeaderProps = {
     workplaceTitle: string
     workplaceLink: string
     rightAlignText: string
+    description: ReactFragment
 }
 
 const FlexContainer = styled(`div`)({
     display: `flex`,
     alignItems: `center`,
+    background: `black`,
+    border: `solid blue`,
+    padding: `2px`,
 })
 
 const RightAlignTextContainer = styled.div`
@@ -22,17 +26,27 @@ const RightAlignTextContainer = styled.div`
 
 const ResumeJobHeader: React.FC<ResumeJobHeaderProps> = (
     props: ResumeJobHeaderProps
-) => (
-    <FlexContainer>
-        <div>
-            <b>{props.jobTitle}</b>
-            {` at `}
-            <ALink linkText={props.workplaceTitle} href={props.workplaceLink} />
-        </div>
-        <RightAlignTextContainer>
-            {props.rightAlignText}
-        </RightAlignTextContainer>
-    </FlexContainer>
-)
+) => {
+    const [isOpen, setOpen] = useState(false)
+
+    return (
+        <>
+            <FlexContainer onClick={() => setOpen(!isOpen)}>
+                <div>
+                    <b>{props.jobTitle}</b>
+                    {` at `}
+                    <ALink
+                        linkText={props.workplaceTitle}
+                        href={props.workplaceLink}
+                    />
+                </div>
+                <RightAlignTextContainer>
+                    {props.rightAlignText}
+                </RightAlignTextContainer>
+            </FlexContainer>
+            {isOpen ? <div>{props.description}</div> : <></>}
+        </>
+    )
+}
 
 export default ResumeJobHeader

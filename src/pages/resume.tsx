@@ -29,6 +29,18 @@ const Resume: React.FC = () => (
                 workplaceTitle={`CSM`}
                 workplaceLink={`https://cs.mines.edu/`}
                 rightAlignText={`2017 - 2019`}
+                description={
+                    <>
+                        <li>test test test</li>
+                        <li>
+                            test test test
+                            <ALink
+                                href="http://hcr.mines.edu"
+                                linkText="Human Centered Robotics Lab"
+                            />
+                        </li>
+                    </>
+                }
             />
             <ResumeList>
                 <ResumeListItem
