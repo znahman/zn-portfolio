@@ -3,10 +3,9 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import ParagraphHeader from '../components/paragraph-header'
-import ResumeJobHeader from '../components/resume-job-header'
+import ExpandableResumeItem from '../components/expandable-resume-item'
 import styled from '@emotion/styled'
 import ALink from '../components/alink'
-import ResumeListItem from '../components/resume-list-item'
 import PublicationListItem from '../components/publication-list-item'
 
 const ResumeList = styled(`ul`)({
@@ -21,117 +20,118 @@ const ResumeSectionHeader = styled(`h3`)({
 const Resume: React.FC = () => (
     <Layout>
         <SEO title="Resume" />
-        <ParagraphHeader title="resume" />
+        <ParagraphHeader title="Resume" />
         <p>
             <ResumeSectionHeader>Education:</ResumeSectionHeader>
-            <ResumeJobHeader
+            <ExpandableResumeItem
                 jobTitle="MS in Computer Science"
                 workplaceTitle={`CSM`}
                 workplaceLink={`https://cs.mines.edu/`}
                 rightAlignText={`2017 - 2019`}
+                description={
+                    <>
+                        <li>
+                            Researched long-term autonomy for mobile robots with
+                            the{' '}
+                            <ALink
+                                href="http://hcr.mines.edu"
+                                linkText="Human Centered Robotics Lab"
+                            />
+                        </li>
+                    </>
+                }
             />
-            <ResumeList>
-                <ResumeListItem
-                    text={`Researched long-term autonomy for mobile robots with the `}
-                    link={
-                        <ALink
-                            href="http://hcr.mines.edu"
-                            linkText="Human Centered Robotics Lab"
-                        />
-                    }
-                />
-            </ResumeList>
-            <ResumeJobHeader
+            <ExpandableResumeItem
                 jobTitle="Computer Science Classes"
                 workplaceTitle={`Regis University`}
                 workplaceLink={`https://www.regis.edu/`}
                 rightAlignText={`2016`}
+                description={
+                    <li>
+                        Attended undergraduate computer science courses to build
+                        a background in computer science
+                    </li>
+                }
             />
-            <ResumeList>
-                <ResumeListItem
-                    text={`Attended undergraduate computer science courses to build a
-                    background in computer science`}
-                />
-            </ResumeList>
-            <ResumeJobHeader
+            <ExpandableResumeItem
                 jobTitle="BS in Mechanical Engineering"
                 workplaceTitle={`CSM`}
                 workplaceLink={`https://mechanical.mines.edu/`}
                 rightAlignText={`2011 - 2015`}
+                description={
+                    <>
+                        <li>Varsity swimming</li>
+                        <li>
+                            Poetry editor for{' '}
+                            <ALink
+                                linkText={`High Grade`}
+                                href={`http://highgrade.mines.edu/`}
+                            />
+                        </li>
+                    </>
+                }
             />
-            <ResumeList>
-                <ResumeListItem text={`Varsity swimming`} />
-                <ResumeListItem
-                    text={`Poetry editor for `}
-                    link={
-                        <ALink
-                            linkText={`High Grade`}
-                            href={`http://highgrade.mines.edu/`}
-                        />
-                    }
-                />
-            </ResumeList>
             <ResumeSectionHeader>Work Experience:</ResumeSectionHeader>
-            <ResumeJobHeader
+            <ExpandableResumeItem
                 jobTitle="Software Engineering Manager"
                 workplaceTitle={`Workday`}
                 workplaceLink={`https://www.workday.com`}
                 rightAlignText={`Nov 2022 - Present`}
+                description={
+                    <li>Workday Drive and File Management Platform</li>
+                }
             />
-            <ResumeList>
-                <ResumeListItem
-                    text={`Workday Drive and File Management Platform`}
-                />
-            </ResumeList>
-            <ResumeJobHeader
+            <ExpandableResumeItem
                 jobTitle="Software Development Engineer"
                 workplaceTitle={`Workday`}
                 workplaceLink={`https://www.workday.com`}
                 rightAlignText={`Feb 2020 - Oct 2022`}
+                description={
+                    <li>
+                        Front-end and back-end development on multiple projects
+                    </li>
+                }
             />
-            <ResumeList>
-                <ResumeListItem
-                    text={`Front-end and back-end development on multiple projects`}
-                />
-            </ResumeList>
-            <ResumeJobHeader
+            <ExpandableResumeItem
                 jobTitle="Software Engineer Intern"
                 workplaceTitle={`Workday`}
                 workplaceLink={`https://www.workday.com`}
                 rightAlignText={`May 2019 - Dec 2019`}
+                description={
+                    <li>Back-end development for Workday's Drive product</li>
+                }
             />
-            <ResumeList>
-                <ResumeListItem
-                    text={`Back-end development for Workday's Drive product`}
-                />
-            </ResumeList>
-            <ResumeJobHeader
+            <ExpandableResumeItem
                 jobTitle="Robotics Engineer Intern"
                 workplaceTitle={`SSL Robotics`}
                 workplaceLink={`https://www.maxar.com/`}
                 rightAlignText={`May 2018 - Aug 2018`}
+                description={
+                    <>
+                        <li>
+                            Built a robotic actuator test automation suite in
+                            Ruby
+                        </li>
+                        <li>
+                            Demonstrated LIDAR technology using ROS and MoveIt
+                            package
+                        </li>
+                    </>
+                }
             />
-            <ResumeList>
-                <ResumeListItem
-                    text={`Built a robotic actuator test automation suite in Ruby`}
-                />
-                <ResumeListItem
-                    text={`Demonstrated LIDAR technology using ROS and MoveIt package`}
-                />
-            </ResumeList>
-            <ResumeJobHeader
+            <ExpandableResumeItem
                 jobTitle="Project Engineer"
                 workplaceTitle={`Wolf Robotics`}
                 workplaceLink={`http://www.wolfrobotics.com/`}
                 rightAlignText={`Jun 2015 - Feb 2018`}
+                description={
+                    <li>
+                        Mechanical site support and integration at customer
+                        facilty for 9 DOF overhead robotic welding gantry with
+                        revolutionary automatic programming capability
+                    </li>
+                }
             />
-            <ResumeList>
-                <ResumeListItem
-                    text={`Mechanical site support and integration at customer facilty
-                    for 9 DOF overhead robotic welding gantry with revolutionary
-                    automatic programming capability`}
-                />
-            </ResumeList>
             <ResumeSectionHeader>Publications:</ResumeSectionHeader>
             <ResumeList>
                 <PublicationListItem
