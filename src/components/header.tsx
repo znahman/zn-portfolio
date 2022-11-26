@@ -13,10 +13,6 @@ const HeaderContainer = styled(`div`)({
     background: `black`,
 })
 
-const RightJustifyContainer = styled(`div`)({
-    marginLeft: `auto`,
-})
-
 const HomeLink = styled(Link)({
     padding: `16px 16px 16px 32px`,
     color: `white`,
@@ -39,10 +35,8 @@ const PageLink = styled(Link)({
 
 const Header: React.FC<HeaderProps> = (props: HeaderProps) => (
     <HeaderContainer>
-        <HomeLink to="/">{props.siteTitle}</HomeLink>
-        <RightJustifyContainer>
-            <PageLink to="/resume">resume</PageLink>
-        </RightJustifyContainer>
+        <HomeLink to="/">Home</HomeLink>
+        <PageLink to="/resume">Resume</PageLink>
     </HeaderContainer>
 )
 
