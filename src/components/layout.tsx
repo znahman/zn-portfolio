@@ -20,8 +20,8 @@ const MainContainer = styled(`div`)`
     padding-top: 32px;
     margin: auto;
     width: 800px;
-    @media (max-width: 400px) {
-        width: 400px;
+    @media (max-width: 600px) {
+        width: 350px;
     }
 `
 

@@ -11,14 +11,14 @@ type IDCardProps = {
 
 const IDCardStyle = styled(`div`)({
     boxSizing: `border-box`,
-    width: `400px`,
+    width: `350px`,
     height: `200px`,
     border: `2px solid white`,
     borderRadius: `20px`,
     margin: `auto`,
     display: `flex`,
     alignItems: `center`,
-    padding: `32px`,
+    padding: `12px`,
 })
 
 const ProfileImage = styled(Img)({
