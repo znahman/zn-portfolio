@@ -36,7 +36,19 @@ const Resume: React.FC = () => (
                             <ALink
                                 href="http://hcr.mines.edu"
                                 linkText="Human Centered Robotics Lab"
-                            />
+                            />{' '} culminating in a Master's Thesis (linked below in Publications)
+                        </li>
+                        <li>
+                            Teaching Assistant for Introduction to Linux OS (CSCI 274)
+                        </li>
+                        <li>
+                            Scholarship recipient from the Computing-Mines Affiliate Partnership Program (C-MAPP) sponsored by GoGo Business Aviation
+                        </li>
+                        <li>
+                            Lead the Mapping team making an attempt at the DARPA Subterranean Challenge utilizing Kalman filtering and point cloud registration
+                        </li>
+                        <li>
+                            Lead the team that won the CSM Newmont Innovation Challenge by developing a novel underground 3D sensor mesh network
                         </li>
                     </>
                 }
@@ -61,6 +73,7 @@ const Resume: React.FC = () => (
                 description={
                     <>
                         <li>Varsity swimming</li>
+                        <li>NASA Robotic Mining Competition 2015</li>
                         <li>
                             Poetry editor for{' '}
                             <ALink
@@ -78,7 +91,9 @@ const Resume: React.FC = () => (
                 workplaceLink={`https://www.workday.com`}
                 rightAlignText={`Nov 2022 - Present`}
                 description={
-                    <li>Workday Drive and File Management Platform</li>
+                    <>
+                        <li>Engineering Manager for Workday Drive and File Management Platform</li>
+                    </>
                 }
             />
             <ExpandableResumeItem
@@ -87,9 +102,11 @@ const Resume: React.FC = () => (
                 workplaceLink={`https://www.workday.com`}
                 rightAlignText={`Feb 2020 - Oct 2022`}
                 description={
-                    <li>
-                        Front-end and back-end development on multiple projects
-                    </li>
+                    <>
+                        <li>
+                            Client (Typescript/React) and Server (Java) development and on-call support for Workday's Drive product
+                        </li>
+                    </>
                 }
             />
             <ExpandableResumeItem
@@ -98,7 +115,7 @@ const Resume: React.FC = () => (
                 workplaceLink={`https://www.workday.com`}
                 rightAlignText={`May 2019 - Dec 2019`}
                 description={
-                    <li>Back-end development for Workday's Drive product</li>
+                    <li>Server (Java) development for Workday's Drive product</li>
                 }
             />
             <ExpandableResumeItem

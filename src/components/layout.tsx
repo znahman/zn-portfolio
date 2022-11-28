@@ -6,7 +6,6 @@
  */
 
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 import { Global, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import Header from './header'
@@ -17,7 +16,6 @@ type LayoutProps = {
 }
 
 const MainContainer = styled(`div`)`
-    padding-top: 32px;
     margin: auto;
     width: 800px;
     @media (max-width: 600px) {
@@ -26,15 +24,16 @@ const MainContainer = styled(`div`)`
 `
 
 const Layout: React.FC<LayoutProps> = (props: LayoutProps) => {
-    const data = useStaticQuery(graphql`
-        query SiteTitleQuery {
-            site {
-                siteMetadata {
-                    title
-                }
-            }
-        }
-    `)
+    // leaving this comment as an example of how to use "useStaticQuery"
+    // const data = useStaticQuery(graphql`
+    //     query SiteTitleQuery {
+    //         site {
+    //             siteMetadata {
+    //                 title
+    //             }
+    //         }
+    //     }
+    // `)
 
     return (
         <>
@@ -44,7 +43,9 @@ const Layout: React.FC<LayoutProps> = (props: LayoutProps) => {
                         font-family: Verdana;
                         color: white;
                     }
-                    html,
+                    html {
+                        overflow-y: scroll;
+                    }
                     body {
                         margin: 0;
                         padding: 0;
@@ -52,8 +53,8 @@ const Layout: React.FC<LayoutProps> = (props: LayoutProps) => {
                     }
                 `}
             />
-            <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
             <MainContainer>
+                <Header/>
                 <main>{props.children}</main>
                 <Footer />
             </MainContainer>

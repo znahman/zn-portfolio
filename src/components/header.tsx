@@ -2,15 +2,12 @@ import { Link } from 'gatsby'
 import React from 'react'
 import styled from '@emotion/styled'
 
-type HeaderProps = {
-    siteTitle: string
-}
-
 const HeaderContainer = styled(`div`)({
     display: `flex`,
     flexDirection: `row`,
     alignItems: `center`,
     background: `black`,
+    marginBottom: `32px`,
 })
 
 const HomeLink = styled(Link)({
@@ -33,7 +30,7 @@ const PageLink = styled(Link)({
     },
 })
 
-const Header: React.FC<HeaderProps> = (props: HeaderProps) => (
+const Header: React.FC = () => (
     <HeaderContainer>
         <HomeLink to="/">Home</HomeLink>
         <PageLink to="/resume">Resume</PageLink>
