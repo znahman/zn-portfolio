@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 type IDCardProps = {
     name: string
@@ -21,7 +21,7 @@ const IDCardStyle = styled(`div`)({
     padding: `12px`,
 })
 
-const ProfileImage = styled(Img)({
+const ProfileImage = styled(GatsbyImage)({
     boxSizing: `border-box`,
     height: `100px`,
     width: `100px`,
@@ -42,9 +42,7 @@ const IDCard: React.FC<IDCardProps> = (props: IDCardProps) => {
                 relativePath: { eq: "profile-photo-transparent.png" }
             ) {
                 childImageSharp {
-                    fluid(maxWidth: 100) {
-                        ...GatsbyImageSharpFluid
-                    }
+                    gatsbyImageData(width: 100)
                 }
             }
         }
@@ -52,7 +50,10 @@ const IDCard: React.FC<IDCardProps> = (props: IDCardProps) => {
 
     return (
         <IDCardStyle>
-            <ProfileImage fluid={data.placeholderImage.childImageSharp.fluid} />
+            <ProfileImage
+                image={data.placeholderImage.childImageSharp.gatsbyImageData}
+                alt={`profile image`}
+            />
             <TextContainer>
                 <div style={{ fontWeight: `bold`, fontSize: `24px` }}>
                     {props.name}

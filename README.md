@@ -16,7 +16,7 @@ To start the dev environment:
 
 To type check and lint:
 
-`yarn test`
+`yarn verify`
 
 To deploy to S3:
 

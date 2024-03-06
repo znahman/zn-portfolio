@@ -21,14 +21,6 @@ const Footer: React.FC = () => (
                 ></ALink>
                 .
             </li>
-            <li>
-                Find me on {` `}
-                <ALink
-                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                    linkText="MySpace"
-                ></ALink>
-                .
-            </li>
         </ul>
     </div>
 )

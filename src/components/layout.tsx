@@ -54,7 +54,7 @@ const Layout: React.FC<LayoutProps> = (props: LayoutProps) => {
                 `}
             />
             <MainContainer>
-                <Header/>
+                <Header />
                 <main>{props.children}</main>
                 <Footer />
             </MainContainer>

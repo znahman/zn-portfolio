@@ -4,7 +4,7 @@ yarn format
 
 echo linting and type checking...
 
-yarn test
+yarn verify
 
 echo Deploying to s3 bucket $AWS_BUCKET_NAME
 

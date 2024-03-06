@@ -1,14 +1,12 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import SEO from '../components/seo'
 import IDCard from '../components/idcard'
 import ParagraphHeader from '../components/paragraph-header'
 import ALink from '../components/alink'
 
 const IndexPage: React.FC = () => (
     <Layout>
-        <SEO title="Home" />
         <IDCard
             name="Zach Nahman"
             title="Software Engineer"
@@ -16,7 +14,7 @@ const IndexPage: React.FC = () => (
         />
         <ParagraphHeader title="hello world" />
         <p style={{ lineHeight: `1.6`, textAlign: `justify` }}>
-            I am a Software Engineering Manager at{` `}
+            I am a Software Engineer at{` `}
             <ALink href="https://www.workday.com" linkText="Workday" />. I love
             learning about the web and working with web applications. I've
             worked previously in industrial automation and aerospace robotics.

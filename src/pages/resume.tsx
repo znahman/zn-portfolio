@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import SEO from '../components/seo'
 import ParagraphHeader from '../components/paragraph-header'
 import ExpandableResumeItem from '../components/expandable-resume-item'
 import styled from '@emotion/styled'
@@ -19,7 +18,6 @@ const ResumeSectionHeader = styled(`h3`)({
 
 const Resume: React.FC = () => (
     <Layout>
-        <SEO title="Resume" />
         <ParagraphHeader title="Resume" />
         <p>
             <ResumeSectionHeader>Education:</ResumeSectionHeader>
@@ -36,19 +34,28 @@ const Resume: React.FC = () => (
                             <ALink
                                 href="http://hcr.mines.edu"
                                 linkText="Human Centered Robotics Lab"
-                            />{' '} culminating in a Master's Thesis (linked below in Publications)
+                            />{' '}
+                            culminating in a Master's Thesis (linked below in
+                            Publications)
                         </li>
                         <li>
-                            Teaching Assistant for Introduction to Linux OS (CSCI 274)
+                            Teaching Assistant for Introduction to Linux OS
+                            (CSCI 274)
                         </li>
                         <li>
-                            Scholarship recipient from the Computing-Mines Affiliate Partnership Program (C-MAPP) sponsored by GoGo Business Aviation
+                            Scholarship recipient from the Computing-Mines
+                            Affiliate Partnership Program (C-MAPP) sponsored by
+                            GoGo Business Aviation
                         </li>
                         <li>
-                            Lead the Mapping team making an attempt at the DARPA Subterranean Challenge utilizing Kalman filtering and point cloud registration
+                            Led the Mapping team making an attempt at the DARPA
+                            Subterranean Challenge utilizing Kalman filtering
+                            and point cloud registration
                         </li>
                         <li>
-                            Lead the team that won the CSM Newmont Innovation Challenge by developing a novel underground 3D sensor mesh network
+                            Led the team that won the CSM Newmont Innovation
+                            Challenge by developing a novel underground 3D
+                            sensor mesh network
                         </li>
                     </>
                 }
@@ -86,13 +93,31 @@ const Resume: React.FC = () => (
             />
             <ResumeSectionHeader>Work Experience:</ResumeSectionHeader>
             <ExpandableResumeItem
+                jobTitle="Software Development Engineer"
+                workplaceTitle={`Workday`}
+                workplaceLink={`https://www.workday.com`}
+                rightAlignText={`Oct 2023 - Present`}
+                description={
+                    <>
+                        <li>
+                            Client (Typescript/React) and Server (Java)
+                            development and on-call support for Workday's email
+                            template editor: Notification Designer
+                        </li>
+                    </>
+                }
+            />
+            <ExpandableResumeItem
                 jobTitle="Software Engineering Manager"
                 workplaceTitle={`Workday`}
                 workplaceLink={`https://www.workday.com`}
-                rightAlignText={`Nov 2022 - Present`}
+                rightAlignText={`Oct 2022 - Oct 2023`}
                 description={
                     <>
-                        <li>Engineering Manager for Workday Drive and File Management Platform</li>
+                        <li>
+                            Engineering Manager for Workday Drive and File
+                            Management Platform
+                        </li>
                     </>
                 }
             />
@@ -104,7 +129,9 @@ const Resume: React.FC = () => (
                 description={
                     <>
                         <li>
-                            Client (Typescript/React) and Server (Java) development and on-call support for Workday's Drive product
+                            Client (Typescript/React) and Server (Java)
+                            development and on-call support for Workday's Drive
+                            product
                         </li>
                     </>
                 }
@@ -115,7 +142,9 @@ const Resume: React.FC = () => (
                 workplaceLink={`https://www.workday.com`}
                 rightAlignText={`May 2019 - Dec 2019`}
                 description={
-                    <li>Server (Java) development for Workday's Drive product</li>
+                    <li>
+                        Server (Java) development for Workday's Drive product
+                    </li>
                 }
             />
             <ExpandableResumeItem

@@ -1,4 +1,4 @@
-import React, { ReactFragment, useState } from 'react'
+import React, { ReactNode, useState } from 'react'
 import styled from '@emotion/styled'
 import ALink from './alink'
 import { CiSquareChevRight, CiSquareChevDown } from 'react-icons/ci'
@@ -8,7 +8,7 @@ type ExpandableResumeItemProps = {
     workplaceTitle: string
     workplaceLink: string
     rightAlignText: string
-    description: ReactFragment
+    description: ReactNode
 }
 
 const FlexContainer = styled(`div`)({

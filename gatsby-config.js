@@ -5,7 +5,6 @@ module.exports = {
         author: `Zach Nahman`,
     },
     plugins: [
-        `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
@@ -13,9 +12,10 @@ module.exports = {
                 path: `${__dirname}/src/images`,
             },
         },
+        `gatsby-plugin-image`,
+        `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-typescript`,
-        `gatsby-plugin-sharp`,
         `gatsby-plugin-emotion`,
         {
             resolve: `gatsby-plugin-manifest`,
