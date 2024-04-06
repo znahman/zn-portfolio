@@ -44,7 +44,10 @@ const ExpandableResumeItem: React.FC<ExpandableResumeItemProps> = (
 
     return (
         <>
-            <FlexContainer onClick={() => setOpen(!isOpen)} tabIndex={0}>
+            <FlexContainer 
+                onClick={() => setOpen(!isOpen)} 
+                onKeyDown={e => e.key === 'Enter' ? setOpen(!isOpen) : ''} 
+                tabIndex={0}>
                 {isOpen ? (
                     <CiSquareChevDown size={24} />
                 ) : (

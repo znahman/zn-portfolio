@@ -18,7 +18,7 @@ const StyledLink = styled.a`
 `
 
 const ALink: React.FC<ALinkProps> = (props: ALinkProps) => (
-    <StyledLink href={props.href} target="_blank">
+    <StyledLink href={props.href} aria-label={props.href + "(opens in a new tab)"} target="_blank">
         {props.linkText}
     </StyledLink>
 )
