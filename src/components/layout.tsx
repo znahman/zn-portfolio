@@ -49,7 +49,7 @@ const Layout: React.FC<LayoutProps> = (props: LayoutProps) => {
                     body {
                         margin: 0;
                         padding: 0;
-                        background: #3a3b3c;
+                        background: #212222;
                     }
                 `}
             />

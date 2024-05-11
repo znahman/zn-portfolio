@@ -68,7 +68,9 @@ const Resume: React.FC = () => (
                 description={
                     <li>
                         Attended undergraduate computer science courses to build
-                        a background in computer science
+                        a background in computer science: Operating Systems,
+                        Algorithms, Discrete Math, Data Structures, and Intro to
+                        Programming
                     </li>
                 }
             />
@@ -93,10 +95,29 @@ const Resume: React.FC = () => (
             />
             <ResumeSectionHeader>Work Experience:</ResumeSectionHeader>
             <ExpandableResumeItem
+                jobTitle="Senior Software Development Engineer"
+                workplaceTitle={`Workday`}
+                workplaceLink={`https://www.workday.com`}
+                rightAlignText={`May 2024 - Present`}
+                description={
+                    <>
+                        <li>
+                            Led cross-team construction of new schema
+                            transformation serivce
+                        </li>
+                        <li>
+                            Client (Typescript/React) and Server (Java)
+                            development and on-call support for Workday's email
+                            template editor: Notification Designer
+                        </li>
+                    </>
+                }
+            />
+            <ExpandableResumeItem
                 jobTitle="Software Development Engineer"
                 workplaceTitle={`Workday`}
                 workplaceLink={`https://www.workday.com`}
-                rightAlignText={`Oct 2023 - Present`}
+                rightAlignText={`Oct 2023 - May 2024`}
                 description={
                     <>
                         <li>
@@ -117,6 +138,10 @@ const Resume: React.FC = () => (
                         <li>
                             Engineering Manager for Workday Drive and File
                             Management Platform
+                        </li>
+                        <li>
+                            Engineering Manager for Workday's rich text editing
+                            platform
                         </li>
                     </>
                 }

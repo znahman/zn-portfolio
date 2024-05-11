@@ -9,12 +9,12 @@ const IndexPage: React.FC = () => (
     <Layout>
         <IDCard
             name="Zach Nahman"
-            title="Software Engineer"
+            title="Senior Software Engineer"
             pronouns="He/Him/His"
         />
         <ParagraphHeader title="hello world" />
         <p style={{ lineHeight: `1.6`, textAlign: `justify` }}>
-            I am a Software Engineer at{` `}
+            I am a Senior Software Engineer at{` `}
             <ALink href="https://www.workday.com" linkText="Workday" />. I love
             learning about the web and working with web applications. I've
             worked previously in industrial automation and aerospace robotics.

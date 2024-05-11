@@ -3,7 +3,7 @@
     "private": true,
     "description": "Resume Website",
     "version": "0.1.0",
-    "author": "Zach Nahman <znahman@gmail.com>",
+    "author": "Zach Nahman",
     "dependencies": {
         "@emotion/react": "^11.11.3",
         "@emotion/styled": "^11.11.0",
