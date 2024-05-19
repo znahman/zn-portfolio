@@ -5,42 +5,45 @@ import ExpandableResumeItem from './expandable-resume-item'
 import userEvent from '@testing-library/user-event'
 
 it('can render an exapandable resume item', async () => {
-    render(<ExpandableResumeItem
-        jobTitle="Test Title"
-        workplaceTitle={`Test Workplace`}
-        workplaceLink={`https://www.example.com/`}
-        rightAlignText={`2016`}
-        description={
-            <li>
-                This is a list react node!
-            </li>
-        }
-    />)
+    render(
+        <ExpandableResumeItem
+            jobTitle="Test Title"
+            workplaceTitle={`Test Workplace`}
+            workplaceLink={`https://www.example.com/`}
+            rightAlignText={`2016`}
+            description={<li>This is a list react node!</li>}
+        />
+    )
 
     expect(screen.getByText('Test Title')).toBeVisible()
     expect(screen.getByText('Test Workplace')).toBeVisible()
     expect(screen.getByText('2016')).toBeVisible()
 
     expect(screen.getByRole('link')).toHaveTextContent('Test Workplace')
-    expect(screen.getByRole('link')).toHaveProperty('href', 'https://www.example.com/')
+    expect(screen.getByRole('link')).toHaveProperty(
+        'href',
+        'https://www.example.com/'
+    )
 
-    expect(screen.queryByText('This is a list react node!')).not.toBeInTheDocument()
+    expect(
+        screen.queryByText('This is a list react node!')
+    ).not.toBeInTheDocument()
 })
 
 it('can render description text when clicked', async () => {
-    render(<ExpandableResumeItem
-        jobTitle="Test Title"
-        workplaceTitle={`Test Workplace`}
-        workplaceLink={`https://www.example.com/`}
-        rightAlignText={`2016`}
-        description={
-            <li>
-                This is a list react node!
-            </li>
-        }
-    />)
+    render(
+        <ExpandableResumeItem
+            jobTitle="Test Title"
+            workplaceTitle={`Test Workplace`}
+            workplaceLink={`https://www.example.com/`}
+            rightAlignText={`2016`}
+            description={<li>This is a list react node!</li>}
+        />
+    )
 
-    expect(screen.queryByText('This is a list react node!')).not.toBeInTheDocument()
+    expect(
+        screen.queryByText('This is a list react node!')
+    ).not.toBeInTheDocument()
 
     await userEvent.click(screen.getByText('Test Title'))
 
@@ -48,22 +51,22 @@ it('can render description text when clicked', async () => {
 })
 
 it('can render description text when opened via keyboard navigation', async () => {
-    render(<ExpandableResumeItem
-        jobTitle="Test Title"
-        workplaceTitle={`Test Workplace`}
-        workplaceLink={`https://www.example.com/`}
-        rightAlignText={`2016`}
-        description={
-            <li>
-                This is a list react node!
-            </li>
-        }
-    />)
+    render(
+        <ExpandableResumeItem
+            jobTitle="Test Title"
+            workplaceTitle={`Test Workplace`}
+            workplaceLink={`https://www.example.com/`}
+            rightAlignText={`2016`}
+            description={<li>This is a list react node!</li>}
+        />
+    )
 
-    expect(screen.queryByText('This is a list react node!')).not.toBeInTheDocument()
+    expect(
+        screen.queryByText('This is a list react node!')
+    ).not.toBeInTheDocument()
 
     await userEvent.tab()
-    await userEvent.keyboard("{enter}");
+    await userEvent.keyboard('{enter}')
 
     expect(screen.queryByText('This is a list react node!')).toBeVisible()
 })
