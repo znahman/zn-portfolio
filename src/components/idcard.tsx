@@ -3,6 +3,8 @@ import styled from '@emotion/styled'
 import { useStaticQuery, graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 
+// TODO: eventually this component should be separated from the image logic so that it doesn't need to know anything specific about me
+
 type IDCardProps = {
     name: string
     title: string
