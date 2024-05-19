@@ -21,3 +21,7 @@ To type check and lint:
 To deploy to S3:
 
 `yarn deploy`
+
+To run tests:
+
+`yarn test`
