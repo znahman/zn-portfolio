@@ -15,5 +15,6 @@ jobs:
       - name: List files in the repository then run unit test
         run: |
           ls ${{ github.workspace }}
+          yarn install
           yarn test
       - run: echo "🍏 This job's status is ${{ job.status }}."
