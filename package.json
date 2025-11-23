@@ -55,11 +55,11 @@
         "build": "gatsby build",
         "develop": "gatsby develop",
         "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-        "start": "yarn run develop",
+        "start": "npm run develop",
         "serve": "gatsby serve",
         "clean": "gatsby clean",
         "lint": "eslint . --ext ts --ext tsx",
-        "verify": "yarn run type-check && yarn run lint",
+        "verify": "npm run type-check && npm run lint",
         "type-check": "tsc --pretty --noEmit",
         "deploy": "./scripts/deploy.sh",
         "test": "jest"
