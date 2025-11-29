@@ -13,7 +13,7 @@ describe('Home Page', () => {
     })
 
     it('should display the ID card with correct information', () => {
-        cy.get('[data-test-id="id-card-text"]')
+        cy.get('[data-testid="id-card-text"]')
             .contains('Zach Nahman')
             .should('be.visible')
         cy.contains('Senior Software Engineer').should('be.visible')

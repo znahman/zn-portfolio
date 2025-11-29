@@ -10,30 +10,23 @@ import { Global, css } from '@emotion/react'
 import styled from '@emotion/styled'
 import Header from './header'
 import Footer from './footer'
+import { useTheme } from '../context/theme-context'
 
 type LayoutProps = {
     children: React.ReactNode
 }
 
-const MainContainer = styled(`div`)`
+const MainContainer = styled.div<{ color: string }>`
     margin: auto;
     width: 800px;
+    color: ${props => props.color};
     @media (max-width: 600px) {
         width: 350px;
     }
 `
 
 const Layout: React.FC<LayoutProps> = (props: LayoutProps) => {
-    // leaving this comment as an example of how to use "useStaticQuery"
-    // const data = useStaticQuery(graphql`
-    //     query SiteTitleQuery {
-    //         site {
-    //             siteMetadata {
-    //                 title
-    //             }
-    //         }
-    //     }
-    // `)
+    const { themeColors } = useTheme()
 
     return (
         <>
@@ -41,19 +34,39 @@ const Layout: React.FC<LayoutProps> = (props: LayoutProps) => {
                 styles={css`
                     div {
                         font-family: Verdana;
-                        color: white;
+                        color: ${themeColors.text};
                     }
                     html {
                         overflow-y: scroll;
+                        background: ${themeColors.background};
                     }
                     body {
                         margin: 0;
                         padding: 0;
-                        background: #212222;
+                        background: ${themeColors.background};
+                        color: ${themeColors.text};
+                    }
+                    p {
+                        color: ${themeColors.text};
+                    }
+                    ul,
+                    li {
+                        color: ${themeColors.text};
+                    }
+                    h1,
+                    h2,
+                    h3,
+                    h4,
+                    h5,
+                    h6 {
+                        color: ${themeColors.text};
+                    }
+                    hr {
+                        border-color: ${themeColors.border};
                     }
                 `}
             />
-            <MainContainer>
+            <MainContainer color={themeColors.text}>
                 <Header />
                 <main>{props.children}</main>
                 <Footer />

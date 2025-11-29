@@ -3,9 +3,14 @@ import '@testing-library/jest-dom'
 import React from 'react'
 import ExpandableResumeItem from './expandable-resume-item'
 import userEvent from '@testing-library/user-event'
+import { ThemeProvider } from '../context/theme-context'
+
+const renderWithTheme = (component: React.ReactElement) => {
+    return render(<ThemeProvider>{component}</ThemeProvider>)
+}
 
 it('can render an exapandable resume item', async () => {
-    render(
+    renderWithTheme(
         <ExpandableResumeItem
             jobTitle="Test Title"
             workplaceTitle={`Test Workplace`}
@@ -31,7 +36,7 @@ it('can render an exapandable resume item', async () => {
 })
 
 it('can render description text when clicked', async () => {
-    render(
+    renderWithTheme(
         <ExpandableResumeItem
             jobTitle="Test Title"
             workplaceTitle={`Test Workplace`}
@@ -51,7 +56,7 @@ it('can render description text when clicked', async () => {
 })
 
 it('can render description text when opened via keyboard navigation', async () => {
-    render(
+    renderWithTheme(
         <ExpandableResumeItem
             jobTitle="Test Title"
             workplaceTitle={`Test Workplace`}
