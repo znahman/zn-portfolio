@@ -4,12 +4,42 @@ describe('404 Page', () => {
         cy.visit('/non-existent-page', { failOnStatusCode: false })
     })
 
-    it('should load the 404 page for non-existent routes', () => {
-        cy.url().should('include', '/non-existent-page')
-        cy.contains('Preview custom 404 page').should('be.visible').click()
+    it('should display the 404 page header', () => {
         cy.contains('404: not found').should('be.visible')
+    })
+
+    it('should display the error message', () => {
         cy.contains("You just hit a route that doesn't exist :(").should(
             'be.visible'
         )
+    })
+
+    it('should display the header with navigation links', () => {
+        cy.contains('Home').should('be.visible')
+        cy.contains('Resume').should('be.visible')
+    })
+
+    it('should be able to navigate to home from 404 page', () => {
+        cy.contains('Home').click()
+        cy.url().should('eq', Cypress.config().baseUrl + '/')
+        // Wait for the page to fully load and hydrate
+        cy.wait(100)
+        cy.contains('hello world', { timeout: 10000 }).should('be.visible')
+    })
+
+    it('should be able to navigate to resume from 404 page', () => {
+        cy.contains('Resume').click()
+        cy.url().should('include', '/resume')
+        // Wait for the page to fully load and hydrate
+        cy.wait(100)
+        cy.contains('Education:', { timeout: 10000 }).should('be.visible')
+    })
+
+    it('should have footer', () => {
+        cy.contains('View my LinkedIn').should('exist')
+    })
+
+    it('should have proper page styling', () => {
+        cy.get('body').should('have.css', 'background-color', 'rgb(33, 34, 34)')
     })
 })

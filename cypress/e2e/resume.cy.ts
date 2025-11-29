@@ -56,7 +56,9 @@ describe('Resume Page', () => {
     it('should navigate to home page when clicking Home link', () => {
         cy.contains('Home').click()
         cy.url().should('eq', Cypress.config().baseUrl + '/')
-        cy.contains('hello world').should('be.visible')
+        // Wait for the page to fully load and hydrate
+        cy.wait(100)
+        cy.contains('hello world', { timeout: 10000 }).should('be.visible')
     })
 
     it('should have footer', () => {

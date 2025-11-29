@@ -40,7 +40,9 @@ describe('Home Page', () => {
     it('should navigate to resume page when clicking Resume link', () => {
         cy.contains('Resume').click()
         cy.url().should('include', '/resume')
-        cy.contains('Education:').should('be.visible')
+        // Wait for the page to fully load and hydrate
+        cy.wait(100)
+        cy.contains('Education:', { timeout: 10000 }).should('be.visible')
     })
 
     it('should have footer', () => {

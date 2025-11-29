@@ -35,3 +35,14 @@ To open Cypress UI for interactive testing:
 `npm run cypress:open`
 
 > **Note:** Make sure the development server is running (`npm start`) before running Cypress tests.
+
+To serve the production build for testing (on port 8000):
+
+`npm run build && npm run serve:ci`
+
+## CI/CD
+
+This project uses GitHub Actions for continuous integration:
+
+- **Jest Tests**: Run on every push to validate React components
+- **Cypress E2E Tests**: Run on every push and pull request to validate the full application flow
