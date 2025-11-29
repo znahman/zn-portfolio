@@ -16,8 +16,9 @@
             }
         ],
         "skipLibCheck": true,
-        "target": "es2015"
+        "target": "es2015",
+        "types": ["jest", "@testing-library/jest-dom"]
     },
-    "include": ["**/*.ts", "**/*.tsx"],
-    "exclude": ["node_modules/*", "public/*"]
+    "include": ["src/**/*.ts", "src/**/*.tsx", "gatsby-*.js", "jest.config.js"],
+    "exclude": ["node_modules/*", "public/*", "cypress"]
 }
