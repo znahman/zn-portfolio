@@ -58,6 +58,7 @@
         "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
         "start": "npm run develop",
         "serve": "gatsby serve",
+        "serve:ci": "gatsby serve -p 8000",
         "clean": "gatsby clean",
         "lint": "eslint . --ext ts --ext tsx",
         "verify": "npm run type-check && npm run lint",
