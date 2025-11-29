@@ -51,12 +51,12 @@ const IDCard: React.FC<IDCardProps> = (props: IDCardProps) => {
     `)
 
     return (
-        <IDCardStyle>
+        <IDCardStyle data-test-id="id-card">
             <ProfileImage
                 image={data.placeholderImage.childImageSharp.gatsbyImageData}
                 alt={`Profile snapshot of website owner Zach Nahman.`}
             />
-            <TextContainer>
+            <TextContainer data-test-id="id-card-text">
                 <div style={{ fontWeight: `bold`, fontSize: `24px` }}>
                     {props.name}
                 </div>

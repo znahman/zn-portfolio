@@ -22,6 +22,16 @@ To deploy to S3:
 
 `npm run deploy`
 
-To run tests:
+To run unit tests:
 
 `npm test`
+
+To run Cypress E2E tests (headless):
+
+`npm run test:e2e`
+
+To open Cypress UI for interactive testing:
+
+`npm run cypress:open`
+
+> **Note:** Make sure the development server is running (`npm start`) before running Cypress tests.
