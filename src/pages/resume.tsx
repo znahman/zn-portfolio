@@ -234,7 +234,7 @@ const Resume: React.FC = () => (
                     titleLink={
                         <ALink
                             linkText={`Robot Learning for Loop Closure Detection and SLAM`}
-                            href={`https://mountainscholar.org/handle/11124/173999`}
+                            href={`https://repository.mines.edu/server/api/core/bitstreams/dd136359-df63-48b5-85cc-e98a4ee1a68f/content`}
                         />
                     }
                     authors={`Master's Thesis: Zachary Nahman`}
@@ -245,7 +245,7 @@ const Resume: React.FC = () => (
                     titleLink={
                         <ALink
                             linkText={`Poster: AI-enabled robotic NDE for structural damage diagnosis and mapping`}
-                            href={``}
+                            href={`https://netl.doe.gov/sites/default/files/netl-file/20VPRSC_Zhang.pdf`}
                         />
                     }
                     authors={`Xiaodong Shi, Zachary Nahman, Fares Alharbi, Ciaron Hamilton, Yiming Deng, and Hao Zhang`}
@@ -256,7 +256,7 @@ const Resume: React.FC = () => (
                     titleLink={
                         <ALink
                             linkText={`Colorado's Best Emerging Poets: An Anthology`}
-                            href={`https://www.amazon.com/Colorados-Best-Emerging-Poets-Anthology/dp/1984105795/ref=sr_1_4?dchild=1&keywords=colorado+best+emerging+poets&qid=1608001536&sr=8-4`}
+                            href={`https://www.goodreads.com/en/book/show/38918053-colorado-s-best-emerging-poets`}
                         />
                     }
                     authors={`Zachary Nahman`}
