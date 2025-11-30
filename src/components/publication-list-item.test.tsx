@@ -3,9 +3,14 @@ import '@testing-library/jest-dom'
 import React from 'react'
 import PublicationListItem from './publication-list-item'
 import ALink from './alink'
+import { ThemeProvider } from '../context/theme-context'
+
+const renderWithTheme = (component: React.ReactElement) => {
+    return render(<ThemeProvider>{component}</ThemeProvider>)
+}
 
 it('can render a publication list item as expected where I am not the first author', async () => {
-    render(
+    renderWithTheme(
         <PublicationListItem
             titleLink={
                 <ALink
@@ -23,7 +28,7 @@ it('can render a publication list item as expected where I am not the first auth
 })
 
 it('can render a publication list item as expected where I am the only author', async () => {
-    render(
+    renderWithTheme(
         <PublicationListItem
             titleLink={
                 <ALink
@@ -41,7 +46,7 @@ it('can render a publication list item as expected where I am the only author', 
 })
 
 it('can render a publication list item as expected where I am the first author of many', async () => {
-    render(
+    renderWithTheme(
         <PublicationListItem
             titleLink={
                 <ALink
