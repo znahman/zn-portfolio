@@ -95,10 +95,23 @@ const Resume: React.FC = () => (
             />
             <ResumeSectionHeader>Work Experience:</ResumeSectionHeader>
             <ExpandableResumeItem
+                jobTitle="Senior Software Engineer"
+                workplaceTitle={`BAE Space & Mission Systems`}
+                workplaceLink={`https://www.baesystems.com/en-us/who-we-are/space-and-mission-systems`}
+                rightAlignText={`Feb 2026 - Present`}
+                description={
+                    <>
+                        <li>
+                            Advanced Test Software for Special Test Equipment
+                        </li>
+                    </>
+                }
+            />
+            <ExpandableResumeItem
                 jobTitle="Senior Software Development Engineer"
                 workplaceTitle={`Workday`}
                 workplaceLink={`https://www.workday.com`}
-                rightAlignText={`May 2024 - Present`}
+                rightAlignText={`May 2024 - Feb 2026`}
                 description={
                     <>
                         <li>
@@ -209,7 +222,7 @@ const Resume: React.FC = () => (
                     titleLink={
                         <ALink
                             linkText={`Voxel-Based Representation Learning for Place Recognition Based on 3D Point Clouds`}
-                            href={`http://ras.papercept.net/images/temp/IROS/files/0686.pdf`}
+                            href={`https://ieeexplore.ieee.org/document/9340992`}
                         />
                     }
                     authors={`Sriram Siva, Zachary Nahman, and Hao Zhang`}
